@@ -18,8 +18,8 @@ activity <- read.table("./data/UCI HAR Dataset/activity_labels.txt", head = FALS
 
 ## Q3. Uses descriptive activity names to name the activities in the data set
 # Change activity labels ("WALKING_UPSTAIRS"...) to camel case (""walkingUpstairs"...)
-activity$activityLabel <- gsub("(\\w)(\\w*)", "\\U\\1\\L\\2", activity$activityLabel, perl = TRUE)
-activity$activityLabel <- gsub("(\\w)(\\w*)_(\\w)(\\w*)", "\\U\\1\\L\\2\\U\\3\\L\\4", activity$activityLabel, perl = TRUE)
+activity$activityLabel <- gsub("(\\w)(\\w*)", "\\L\\1\\L\\2", activity$activityLabel, perl = TRUE)
+activity$activityLabel <- gsub("(\\w)(\\w*)_(\\w)(\\w*)", "\\L\\1\\L\\2\\U\\3\\L\\4", activity$activityLabel, perl = TRUE)
 
 # Load the train and test data set
 # Use features$featureDescription as column name
