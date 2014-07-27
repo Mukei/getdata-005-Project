@@ -76,4 +76,3 @@ dataSetTidyAverage <- dcast(dataSetMolten,  subjectId + activityLabel ~ measurem
 
 message("Writing the tidy data set to 'dataSetTidyAverage.txt'")
 write.table(dataSetTidyAverage, file = "./dataSetTidyAverage.txt", row.names = FALSE, sep = ",") # Create tidy dataSet file
-
